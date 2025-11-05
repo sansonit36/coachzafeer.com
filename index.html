@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coach Zafeer - Elite Fitness Transformation Expert | 90-Day Body Transformation</title>
+    <meta name="description" content="Transform your body in 90 days with Coach Zafeer's proven Habits & Hypertrophy System. Join 500+ busy professionals who achieved their dream physique without endless gym hours or restrictive diets." />
+    <meta name="keywords" content="fitness coach, body transformation, weight loss, muscle building, nutrition coaching, personal trainer" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Coach Zafeer - Elite Fitness Transformation Expert" />
+    <meta property="og:description" content="Transform your body in 90 days with proven system. 500+ success stories." />
+    <meta property="og:type" content="website" />
+    
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Meta Pixel Base: REPLACE YOUR_PIXEL_ID -->
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+      }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+      // Stable event_id per page load (for dedup with CAPI)
+      window.__coachz_eid_pageview = 'pv_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+
+      fbq('init', '1293477825732647', {autoConfig: true}, {agent:'coachzafeer'});
+      fbq('track', 'PageView', {event_id: window.__coachz_eid_pageview});
+    </script>
+
+    <!-- Calendly Widget Script -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <!-- Keep Wistia libs (no tracking here) -->
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    <script src="https://fast.wistia.com/player.js" async></script>
+    <script src="https://fast.wistia.com/embed/8n54vym3js.js" async type="module"></script>
+
+    <!-- Wistia Placeholder Style -->
+    <style>
+      wistia-player[media-id='8n54vym3js']:not(:defined) { 
+        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/8n54vym3js/swatch'); 
+        display: block; 
+        filter: blur(5px); 
+        padding-top: 56.25%; 
+      }
+    </style>
+
+    <!-- Funnel Tracking: fbp/fbc propagation, CTA click, CAPI client -->
+    <script>
+      // ---------- Helpers ----------
+      function qp(name){ try{ const u=new URL(window.location.href); return u.searchParams.get(name)||''; }catch(e){ return ''; } }
+      function getCookie(name){
+        const m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()[\]\\/+^])/g,'\\$1') + '=([^;]*)'));
+        return m ? decodeURIComponent(m[1]) : '';
+      }
+      // Build fbc from fbclid (Meta format: fb.1.<unix_ts>.<fbclid>)
+      function buildFBC(){
+        const fbclid = qp('fbclid');
+        if(!fbclid) return '';
+        const ts = Math.floor(Date.now()/1000);
+        return `fb.1.${ts}.${fbclid}`;
+      }
+
+      // Store identifiers
+      window.__coachz_ids = {
+        fbp: getCookie('_fbp') || '',
+        fbc: buildFBC()
+      };
+
+      // ---------- Attach fbp/fbc to outbound form links ----------
+      const FORM_HOSTS = [
+        'coachzafeer.com',
+        'www.coachzafeer.com',
+        'kochzafeu.com',
+        'www.kochzafeu.com'
+      ];
+
+      function needsAugment(a){
+        try{
+          if(!a || !a.href) return false;
+          const url = new URL(a.href, window.location.href);
+          return FORM_HOSTS.some(h => url.hostname === h || url.hostname.endsWith('.'+h));
+        }catch(e){ return false; }
+      }
+
+      function augmentLink(a){
+        try{
+          const url = new URL(a.href, window.location.href);
+          if (window.__coachz_ids?.fbp && !url.searchParams.get('fbp')) url.searchParams.set('fbp', window.__coachz_ids.fbp);
+          if (window.__coachz_ids?.fbc && !url.searchParams.get('fbc')) url.searchParams.set('fbc', window.__coachz_ids.fbc);
+          a.href = url.toString();
+        }catch(e){}
+      }
+
+      // --------- CAPI sender (to PHP endpoint on coachzafeer.com) ---------
+      const CAPI_ENDPOINT = 'https://coachzafeer.com/track/meta-capi.php';
+      const CAPI_SECRET   = 'Asdf9988!'; // must match PHP script
+
+      async function sendCAPI(event_name, { event_id, custom_data } = {}) {
+        try {
+          const body = {
+            event_name,
+            event_id,
+            event_source_url: location.href,
+            fbp: window.__coachz_ids?.fbp || null,
+            fbc: window.__coachz_ids?.fbc || null,
+            custom_data: custom_data || {}
+          };
+          await fetch(CAPI_ENDPOINT, {
+            method: 'POST',
+            headers: {
+              'Content-Type':'application/json',
+              'X-Api-Secret': CAPI_SECRET
+            },
+            body: JSON.stringify(body),
+            keepalive: true
+          });
+        } catch(e) { /* no-op */ }
+      }
+
+      function wireAnchor(a){
+        if(!a || a.__wired) return;
+        if(needsAugment(a)) augmentLink(a);
+        a.addEventListener('click', function(){
+          if(needsAugment(a)) augmentLink(a); // ensure freshest fbp just-in-time
+          const clickId = 'cta_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+          const linkText = (a.textContent||'').trim().slice(0,120);
+
+          // Browser
+          fbq('trackCustom','ClickCTA', {event_id: clickId, link_text: linkText, href: a.href});
+          // Server (CAPI)
+          sendCAPI('ClickCTA', { event_id: clickId, custom_data: { link_text: linkText, href: a.href } });
+        }, {passive:true});
+        a.__wired = true;
+      }
+
+      function scanAndWire(){
+        document.querySelectorAll('a[href]').forEach(wireAnchor);
+      }
+
+      document.addEventListener('DOMContentLoaded', function(){
+        // update fbp cookie shortly after pixel initializes
+        setTimeout(function(){
+          const fbpNew = getCookie('_fbp');
+          if(fbpNew) window.__coachz_ids.fbp = fbpNew;
+        }, 500);
+
+        // Send PageView via CAPI (dedup with same event_id)
+        sendCAPI('PageView', { event_id: window.__coachz_eid_pageview });
+
+        scanAndWire();
+        const mo = new MutationObserver(() => scanAndWire());
+        mo.observe(document.documentElement, {childList:true, subtree:true});
+      });
+    </script>
+  </head>
+  <body>
+    <!-- noscript image must be in BODY (avoid parse5 error) -->
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=1293477825732647&ev=PageView&noscript=1" />
+    </noscript>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
