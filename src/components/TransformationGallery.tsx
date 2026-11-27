@@ -118,6 +118,51 @@ const TransformationGallery = () => {
             bodyFat: "-10%"
           },
           quote: "Broke the cycle of inconsistency. Now I genuinely enjoy training and feel confident!"
+        },
+        {
+          id: 7,
+          name: "Talha",
+          age: 30,
+          profession: "Professional",
+          timeframe: "12 weeks",
+          beforeImage: "https://coachzafeer.com/Talhabefore.jpg",
+          afterImage: "https://coachzafeer.com/Talhaafter.jpg",
+          results: {
+            weightLoss: "15 kg",
+            muscleLoss: "+2 kg",
+            bodyFat: "-12%"
+          },
+          quote: "3 months of dedication completely transformed my physique!"
+        },
+        {
+          id: 8,
+          name: "Musa",
+          age: 23,
+          profession: "Professional",
+          timeframe: "28 weeks",
+          beforeImage: "https://coachzafeer.com/Musabefore.jpg",
+          afterImage: "https://coachzafeer.com/Musaafter.jpg",
+          results: {
+            weightLoss: "0 kg",
+            muscleLoss: "+10 kg",
+            bodyFat: "-5%"
+          },
+          quote: "7 months of training helped me build serious muscle mass!"
+        },
+        {
+          id: 9,
+          name: "Shehryar Arshad",
+          age: 27,
+          profession: "Professional",
+          timeframe: "40 weeks",
+          beforeImage: "https://coachzafeer.com/Shehryararshadbefore.jpg",
+          afterImage: "https://coachzafeer.com/Shehryararshadafter.jpg",
+          results: {
+            weightLoss: "0 kg",
+            muscleLoss: "+12 kg",
+            bodyFat: "-8%"
+          },
+          quote: "10 months with Coach Zafeer packed on serious muscle!"
         }
       ];
       setTransformations(defaultTransformations);
@@ -289,7 +334,7 @@ const TransformationGallery = () => {
             <p className="text-gray-700 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
               These transformations happened in 10-18 weeks. Imagine where you could be by this time next year if you start today.
             </p>
-            <a href="https://crm.coachzafeer.com" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl inline-block">
+            <a href="https://coachzafeer.onethread.cloud/f/hnh-booking" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl inline-block">
               Start Your Transformation Now
             </a>
           </div>

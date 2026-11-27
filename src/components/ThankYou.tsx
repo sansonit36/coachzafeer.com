@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CheckCircle, Calendar, Download, ArrowRight } from 'lucide-react';
 
 const ThankYou = () => {
+  useEffect(() => {
+    // Track conversion with Meta Pixel
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'CompleteRegistration', {
+        content_name: 'Consultation Scheduled',
+        content_category: 'Fitness Coaching',
+        value: 50,
+        currency: 'USD'
+      });
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center p-4">
       <div className="max-w-2xl mx-auto text-center space-y-8">
@@ -61,7 +73,7 @@ const ThankYou = () => {
         {/* CTA Buttons */}
         <div className="space-y-4">
           <a
-            href="https://calendly.com/coach-zafeer/transformation-consultation"
+            href="https://coachzafeer.onethread.cloud/f/hnh-booking"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl"

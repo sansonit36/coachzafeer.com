@@ -119,7 +119,7 @@ const FAQ = () => {
               Book a free consultation call and I'll answer all your questions personally. 
               No pressure, no sales pitch - just honest answers about whether this program is right for you.
             </p>
-            <a href="https://crm.coachzafeer.com" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <a href="https://coachzafeer.onethread.cloud/f/hnh-booking" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
               Book Your Free Call
             </a>
           </div>

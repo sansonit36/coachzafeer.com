@@ -99,6 +99,42 @@ const Testimonials = () => {
           story: "In just two and a half months, I achieved a transformation I never thought possible—dropping 20KGs fat in 6 Months, building visible muscle, and feeling stronger every single week. The plan was clear, realistic, and designed specifically for me, and with the coach's guidance, I pushed past limits I didn't even know existed.",
           featured: true,
           rating: 5
+        },
+        {
+          name: "Talha",
+          title: "Professional",
+          age: 30,
+          results: "Lost significant weight • Transformed physique",
+          timeframe: "12 weeks",
+          beforeImage: "https://coachzafeer.com/Talhabefore.jpg",
+          afterImage: "https://coachzafeer.com/Talhaafter.jpg",
+          story: "In just 3 months, I achieved a transformation I never thought possible. The structured plan and guidance helped me shed the extra weight and completely transform my physique. The results speak for themselves!",
+          featured: false,
+          rating: 5
+        },
+        {
+          name: "Musa",
+          title: "Professional",
+          age: 23,
+          results: "Gained significant muscle mass",
+          timeframe: "28 weeks",
+          beforeImage: "https://coachzafeer.com/Musabefore.jpg",
+          afterImage: "https://coachzafeer.com/Musaafter.jpg",
+          story: "Over 7 months of dedicated training, I completely transformed my body. The personalized approach and constant support helped me build the muscle mass I always wanted. Now I feel more confident and stronger than ever!",
+          featured: false,
+          rating: 5
+        },
+        {
+          name: "Shehryar Arshad",
+          title: "Professional",
+          age: 27,
+          results: "Gained impressive muscle mass",
+          timeframe: "40 weeks",
+          beforeImage: "https://coachzafeer.com/Shehryararshadbefore.jpg",
+          afterImage: "https://coachzafeer.com/Shehryararshadafter.jpg",
+          story: "10 months of consistent training with Coach Zafeer completely changed my life. The structured workout plan and nutrition guidance helped me pack on serious muscle mass. My strength and confidence are at an all-time high!",
+          featured: true,
+          rating: 5
         }
       ];
       setTestimonials(defaultTestimonials);
@@ -265,7 +301,7 @@ const Testimonials = () => {
 
                           {/* CTA */}
                           <div className="text-center pt-2">
-                            <a href="https://crm.coachzafeer.com" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-sm px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            <a href="https://coachzafeer.onethread.cloud/f/hnh-booking" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-sm px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                               Start Your Transformation
                             </a>
                           </div>
@@ -372,7 +408,7 @@ const Testimonials = () => {
 
                             {/* CTA */}
                             <div className="text-center pt-2">
-                              <a href="https://crm.coachzafeer.com" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-sm px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                              <a href="https://coachzafeer.onethread.cloud/f/hnh-booking" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-sm px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                                 Start Your Transformation
                               </a>
                             </div>

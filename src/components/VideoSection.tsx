@@ -138,7 +138,7 @@ const VideoSection: React.FC = () => {
         {/* CTA */}
         <div className="text-center mb-8 sm:mb-12">
           <a
-            href="https://crm.coachzafeer.com"
+            href="https://coachzafeer.onethread.cloud/f/hnh-booking"
             className="group relative bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 rounded-2xl transition-all duration-300 transform hover:scale-105 premium-shadow hover:premium-glow inline-block w-full sm:w-auto max-w-md mx-auto"
           >
             <span className="flex items-center justify-center gap-3">

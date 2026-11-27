@@ -176,6 +176,16 @@ const LeadCapture = () => {
         savedLead = await leadsService.createLead(leadData);
         console.log('Lead saved to Supabase:', savedLead.id);
         
+        // Track lead submission with Meta Pixel
+        if (typeof window !== 'undefined' && window.fbq) {
+          window.fbq('track', 'Lead', {
+            content_name: 'Lead Generation',
+            content_category: 'Fitness Coaching',
+            value: 10,
+            currency: 'USD'
+          });
+        }
+        
         // Store lead ID for Calendly tracking
         localStorage.setItem('pending-calendly-lead', savedLead.id);
       } catch (supabaseError) {
@@ -202,7 +212,7 @@ const LeadCapture = () => {
         // High-qualified lead - direct to Calendly
         trackJourneyStep('redirected_to_calendly', { qualificationScore });
         const leadId = savedLead?.id || 'fallback-' + Date.now();
-        window.location.href = 'https://calendly.com/samiplays95/30min?utm_source=website&utm_medium=form&lead_id=' + leadId;
+        window.location.href = 'https://coachzafeer.onethread.cloud/f/hnh-booking?utm_source=website&utm_medium=form&lead_id=' + leadId;
       } else {
         // Lower qualified - redirect to nurture sequence
         trackJourneyStep('redirected_to_nurture', { qualificationScore });
@@ -225,7 +235,7 @@ const LeadCapture = () => {
       
       // Redirect to appropriate page
       if (qualificationScore >= 60) {
-        window.location.href = 'https://calendly.com/samiplays95/30min?utm_source=website&utm_medium=form&emergency=true';
+        window.location.href = 'https://coachzafeer.onethread.cloud/f/hnh-booking?utm_source=website&utm_medium=form&emergency=true';
       } else {
         window.location.href = '/thank-you-nurture';
       }
@@ -625,7 +635,7 @@ const LeadCapture = () => {
             <div className="bg-white rounded-xl overflow-hidden shadow-lg">
               <div 
                 className="calendly-inline-widget" 
-                data-url="https://calendly.com/samiplays95/30min?text_color=000000&primary_color=ff7800" 
+                data-url="https://coachzafeer.onethread.cloud/f/hnh-booking"
                 style={{ minWidth: '320px', height: '700px', width: '100%' }}
               ></div>
             </div>

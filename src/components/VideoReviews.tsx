@@ -65,6 +65,39 @@ const DEFAULT_VIDEOS: VideoReview[] = [
       'https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=600&h=800',
     featured: false,
   },
+  {
+    id: 5,
+    name: 'Faheem Abdullah',
+    title: 'Business Professional',
+    results: 'Lost 15 KGs • Better Physique',
+    timeframe: '18 weeks',
+    wistiaId: 'nvvev6dudw',
+    thumbnail:
+      'https://embed-ssl.wistia.com/deliveries/9308814439b688909e3248e51b8a3136d07e54e4.jpg',
+    featured: true,
+  },
+  {
+    id: 6,
+    name: 'Muhammad Abbas',
+    title: 'Professional',
+    results: 'Lost 5% Body fat • Gained 5 lbs muscle',
+    timeframe: '36 weeks',
+    wistiaId: 'bzk1lc87qa',
+    thumbnail:
+      'https://embed-ssl.wistia.com/deliveries/6754321098765432109876543210987654321098.jpg',
+    featured: false,
+  },
+  {
+    id: 7,
+    name: 'Talha Chaudhary',
+    title: 'Entrepreneur',
+    results: 'Lost 15 KGs • Transformed Body',
+    timeframe: '24 weeks',
+    wistiaId: '5h2r41euza',
+    thumbnail:
+      'https://embed-ssl.wistia.com/deliveries/abcdef1234567890abcdef1234567890abcdef.jpg',
+    featured: true,
+  }
 ];
 
 const VideoReviews: React.FC<Props> = ({ videos, src, initialSlide = 0 }) => {
@@ -368,7 +401,7 @@ const VideoReviews: React.FC<Props> = ({ videos, src, initialSlide = 0 }) => {
         {/* CTA */}
         <div className="text-center">
           <a
-            href="https://crm.coachzafeer.com"
+            href="https://coachzafeer.onethread.cloud/f/hnh-booking"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl"
           >
             Start Your Transformation

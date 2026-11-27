@@ -2,6 +2,8 @@ import React from 'react';
 import { Clock, Phone, Mail, MapPin, AlertCircle, ArrowRight, Shield, Star } from 'lucide-react';
 
 const FinalCTA = () => {
+  const currentMonth = new Date().toLocaleString('en-US', { month: 'long', year: 'numeric' });
+
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden">
       {/* Background Effects */}
@@ -20,7 +22,7 @@ const FinalCTA = () => {
             </div>
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
               I only accept <strong className="text-white">12 new clients per month</strong> to ensure each person gets the personal attention they deserve. 
-              <strong className="text-orange-400 block mt-2">Only 3 spots remaining for January 2025.</strong>
+              <strong className="text-orange-400 block mt-2">Only 3 spots remaining for {currentMonth}.</strong>
             </p>
           </div>
 
@@ -41,7 +43,7 @@ const FinalCTA = () => {
 
           {/* Main CTA */}
           <div className="space-y-6 sm:space-y-8">
-            <a href="https://crm.coachzafeer.com" className="group relative bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-black text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-orange-500/25 w-full sm:w-auto inline-block max-w-md mx-auto">
+            <a href="https://coachzafeer.onethread.cloud/f/hnh-booking" className="group relative bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-black text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-orange-500/25 w-full sm:w-auto inline-block max-w-md mx-auto">
               <span className="flex items-center justify-center gap-3">
                 <span>Book Your Call Now</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-200 flex-shrink-0" />
